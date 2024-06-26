@@ -1,0 +1,59 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row text-center justify-content-center">
+      <mat-form-field appearance="fill">
+        <mat-label>Select a Blockchain</mat-label>
+
+        <mat-select
+          [(ngModel)]="selectedBlockchain"
+          (selectionChange)="onSelectBlockchain($event.value)"
+        >
+          <mat-option *ngFor="let item of blockchain" [value]="item.name">{{
+            item.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" style="margin-left: 20px">
+        <mat-label>Select a Collection</mat-label>
+
+        <mat-select
+          [(ngModel)]="selectedCollection"
+          (selectionChange)="onSelectCollection($event.value)"
+        >
+          <mat-option *ngFor="let item of collection" [value]="item.name">{{
+            item.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <br>
+    <br>
+
+    <div class="row"></div>
+
+    <div class="row">
+      <div class="col-8" id="containerBar"></div>
+    </div>
+    <br>
+    <br>
+    
+    
+    
+    <div class="row">
+      <div class="col-8" id="containerColumn"></div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="row">
+      <div class="col-8" id="containerScatter"></div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="row">
+      <div class="col-8" id="containerPie"></div>
+    </div>
+  </div>
+</div>
